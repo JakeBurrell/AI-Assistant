@@ -22,9 +22,8 @@ def call_function(function_call_part, verbose=False):
     }
     function_name = function_call_part.name
     function_args = function_call_part.args
-    function_args['working_directory'] = "./calculator"
     if function_name in functions:
-        function_result = functions[function_name](**function_args)
+        function_result = functions[function_name](**function_args, working_directory="./calculator")
         return types.Content(
             role="tool",
             parts=[

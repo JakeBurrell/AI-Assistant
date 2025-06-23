@@ -3,7 +3,7 @@ from google.genai import types
 
 def get_files_info(working_directory, directory=None):
     abs_work_dir = os.path.abspath(working_directory)
-    
+    abs_dir = abs_work_dir  
     if directory:
         abs_dir = os.path.abspath(os.path.join(working_directory, directory))
     if not abs_dir.startswith(abs_work_dir):

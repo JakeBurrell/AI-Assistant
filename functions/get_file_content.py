@@ -3,7 +3,6 @@ from google.genai import types
 
 MAX_CHARS = 10000
 def get_file_content(working_directory, file_path):
-    print(file_path)
     try:
         abs_work_dir = os.path.abspath(working_directory)
         abs_file_path = os.path.abspath(os.path.join(abs_work_dir, file_path))
